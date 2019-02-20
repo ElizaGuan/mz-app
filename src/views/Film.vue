@@ -2,7 +2,10 @@
     <div>
         <Banner></Banner>
         <sub-tabs></sub-tabs>
-        <router-view></router-view>
+        <keep-alive>
+            <router-view></router-view>
+        </keep-alive>
+        <!-- <router-link></router-link> -->
     </div>
 </template>
 

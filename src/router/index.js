@@ -7,6 +7,7 @@ import Center from '../views/Center.vue';
 import City from '../views/City.vue';
 import NowPlaying from '../components/NowPlaying';
 import SoonComing from '../components/SoonComing';
+import Detail from '../views/Detail.vue'
 
 Vue.use(VueRouter)
 
@@ -35,6 +36,11 @@ export default new VueRouter({
                             {
                                 path: 'soonComing',
                                 component: SoonComing
+                            },
+                            {
+                                path: '',
+                                // component: Film  
+                                redirect: '/film/nowPlaying'  // 这里要 '/' 
                             }
                         ]
                     },
@@ -58,6 +64,15 @@ export default new VueRouter({
         {
             path: '/city',
             component: City
+        },
+        {
+            path:'/detail/:id',
+            component:Detail,
+            props:function(route){
+                return {
+                    _id : route.query._id
+                }
+            }
         },
         // 设置一个 通配符的 一级路由，当url地址无法与上面的规则匹配的时候，就会跟我匹配。
         {

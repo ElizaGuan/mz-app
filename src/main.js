@@ -6,6 +6,13 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+var bus = new Vue();
+Vue.prototype.$center = bus
+
+Vue.filter('replaceWH', (path, w, h)=>{
+  return path.replace(/w.h/, `${w}.${h}`);
+})
+
 new Vue({
   router,
   render: h => h(App),

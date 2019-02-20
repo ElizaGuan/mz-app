@@ -18,5 +18,18 @@
     "sass": "^1.16.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.21"
+  },
+  "vue": {
+    "devServer": {
+        "proxy": {
+            "/axios": {
+                "target": "http://m.maoyan.com",
+                "changeOrigin": true,
+                "pathRewrite":{
+                  "^/axios": ""
+              }
+            }
+        }
+    }
   }
 }

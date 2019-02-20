@@ -3,10 +3,12 @@
         <!-- <a href="/#/film">
             <i></i>
         </a> -->
-        <router-link to="/film" class="film">
+        <keep-alive>
+            <router-link to="/film" class="film">
           <i class="iconfont icon-dianying"></i>
             <span>电影</span>
         </router-link>
+        </keep-alive>
         <router-link to="/cinema" class="cinema">
           <i class="iconfont icon-yingyuan"></i>            
             <span>影院</span>
@@ -34,6 +36,7 @@ export default {
     width: 100%;
     display: flex;
     border:1px solid #ededed;
+    background: white;
     // 这个 a 标签实际就是 router-link
     a{
         flex: 1;
