@@ -47,8 +47,8 @@ export default {
             })
             .then((res)=>{
                 that.movieData = res.data.detailMovie
-                console.log(JSON.stringify(res.data))
-                console.log(res.data)      
+                // console.log(JSON.stringify(res.data))
+                // console.log(res.data)      
             })
             .catch((err)=>{
                 console.log(err.message)

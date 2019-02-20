@@ -8,6 +8,8 @@ import City from '../views/City.vue';
 import NowPlaying from '../components/NowPlaying';
 import SoonComing from '../components/SoonComing';
 import Detail from '../views/Detail.vue'
+import User from '../views/User.vue'
+import Login from '../views/Login.vue'
 
 Vue.use(VueRouter)
 
@@ -67,12 +69,15 @@ export default new VueRouter({
         },
         {
             path:'/detail/:id',
-            component:Detail,
-            props:function(route){
-                return {
-                    _id : route.query._id
-                }
-            }
+            component:Detail
+        },
+        {
+            path: '/user/:id',
+            component: User
+        },
+        {
+            path: '/login',
+            component: Login
         },
         // 设置一个 通配符的 一级路由，当url地址无法与上面的规则匹配的时候，就会跟我匹配。
         {
