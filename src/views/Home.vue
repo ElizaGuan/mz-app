@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="height:100%">
         <keep-alive>
             <router-view class="home"></router-view>
         </keep-alive>
@@ -17,4 +17,5 @@ export default {
 </script>
 
 <style>
+
 </style>

@@ -1,13 +1,27 @@
 <template>
     <div class="avatar">
         <img class="avator-icon" src="../../assets/avatar.png" alt="">
-        <router-link tag="div" to="/login">立即登录</router-link>
+        <router-link tag="div" to="/login">
+           <span v-if="newNickName"> {{ nickName }} </span>
+           <span v-else>立即登录</span>
+        </router-link>
     </div>
 </template>
 
 <script>
 export default {
-
+data() {
+    return {
+        nickName:sessionStorage.nickName
+    }
+},
+computed: {
+    newNickName(){
+        console.log(11)
+        this.nickName = sessionStorage.nickName
+        return this.nickName;
+    }
+},
 }
 </script>
 

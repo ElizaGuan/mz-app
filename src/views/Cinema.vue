@@ -1,6 +1,6 @@
 <template>
-    <div>
-        影院
+    <div class="cinema">
+        <div class="cinema-scroll">影院</div>
     </div>
 </template>
 
@@ -10,6 +10,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.cinema{
+    .cinema-scroll{
+        height: 1000px;
+    }
+}
 </style>
